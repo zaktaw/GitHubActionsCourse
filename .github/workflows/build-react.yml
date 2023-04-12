@@ -5,8 +5,8 @@ on:
   workflow_dispatch:
 
 jobs:
-
   build:
+  
     runs-on: ubuntu-latest
 
     steps:
@@ -23,10 +23,5 @@ jobs:
     - run: npm run build
       working-directory: ./my-app
     
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: test
-      - run: npm test
-        working-directory: ./my-app
+    - run: npm test
+      working-directory: ./my-app
